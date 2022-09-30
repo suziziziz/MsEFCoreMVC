@@ -1,4 +1,3 @@
-
 using MsEFCoreMVC.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,7 +18,7 @@ namespace MsEFCoreMVC {
       services.AddControllersWithViews();
     }
 
-    public void Configure() {
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment environment) {
 
     }
   }
