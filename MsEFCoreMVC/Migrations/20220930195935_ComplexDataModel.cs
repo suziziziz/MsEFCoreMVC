@@ -104,7 +104,7 @@ namespace MsEFCoreMVC.Migrations {
                       principalColumn: "ID");
           });
 
-      migrationBuilder.Sql("INSERT INTO \"Department\" (\"Name\", \"Budget\", \"StartDate\") VALUES ('Temp', 0.00, \"CURRENT_DATE\"())");
+      migrationBuilder.Sql("INSERT INTO \"Department\" (\"Name\", \"Budget\", \"StartDate\") VALUES ('Temp', 0.00, (SELECT CURRENT_DATE))");
       // Default value for FK points to department created above, with
       // defaultValue changed to 1 in following AddColumn statement.
 
