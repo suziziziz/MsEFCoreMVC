@@ -4,20 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MsEFCoreMVC.Models {
-  public class Student {
-    public int ID { get; set; }
-
-    [Required]
-    [StringLength(50, MinimumLength = 2)]
-    [Display(Name = "Last Name")]
-    public string LastName { get; set; }
-
-    [Required]
-    [StringLength(50)]
-    [Column("FirstName")]
-    [Display(Name = "First Name")]
-    public string FirstMidName { get; set; }
-
+  public class Student : Person {
     private DateTime _enrollmentDate;
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
@@ -25,13 +12,6 @@ namespace MsEFCoreMVC.Models {
     public DateTime EnrollmentDate {
       get => _enrollmentDate;
       set => _enrollmentDate = value.ToUniversalTime();
-    }
-
-    [Display(Name = "Full Name")]
-    public string FullName {
-      get {
-        return LastName + ", " + FirstMidName;
-      }
     }
 
 
