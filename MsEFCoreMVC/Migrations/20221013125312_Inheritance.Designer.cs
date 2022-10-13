@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MsEFCoreMVC.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20221011143239_Inheritance")]
+    [Migration("20221013125312_Inheritance")]
     partial class Inheritance
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
